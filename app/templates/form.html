@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <p>To book an appointment please fill out this form</p>
+    <form method="POST" action="/emp">
+        {% csrf_token %}
+        <div>
+            <br>
+            <p>
+                <h3>Enter Details</h3>
+            </p>
+            <div>
+                <p>Parent National Id:</p>{{ form.eid }}
+            </div>
+            <div>
+                <p>Child full Names::</p>{{ form.ename }}
+            </div>
+            <div>
+                <p>Parent Email:</p>{{ form.eemail }}
+            </div>
+            <div>
+                <p>Parent contact:</p>{{ form.econtact }}
+            </div>
+            <div>
+                <br>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

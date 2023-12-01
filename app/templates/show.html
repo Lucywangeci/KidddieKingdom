@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <table>
+        <thead>
+            <tr>
+                <th>Parent ID</th>
+                <th>Child Name</th>
+                <th>Parent Email</th>
+                <th>Parent Contact</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{ parent.eid }}</td>
+                <td>{{child.ename}}</td>
+                <td>{{parent.eemail}}</td>
+                <td>{{parent.econtact}}</td>
+                <td>
+                    <a href="/edit/{{ parent.id }}">Edit</a>
+                    <a href="/delete/{{parent.id}}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <button><a style="color:white;" href="/emp">Add New Record</a></button>
+{% endblock %}
