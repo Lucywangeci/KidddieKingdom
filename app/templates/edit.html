@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block body %}
-    <form method="POST" action="/update/{{parent.id}}">
+
+    <form method="POST" action="/update/{{employee.id}}">
         {% csrf_token %}
         <div>
             <br>
@@ -11,27 +12,27 @@
             </p>
         </div>
         <div>
-            <p>parent Id:</p>
+            <p>Employee Id:</p>
             <div>
-                <input type="text" name="eid" value="{{parent.eid}}" />
+                <input type="text" name="eid" value="{{employee.eid}}" />
             </div>
         </div>
         <div>
-            <p>child Name:</p>
+            <p>Employee Name:</p>
             <div>
-                <input type="text" name="ename" value="{{child.ename}}" />
+                <input type="text" name="ename" value="{{employee.ename}}" />
             </div>
         </div>
         <div>
-            <p>parent Email :</p>
+            <p>Employee Email :</p>
             <div>
-                <input type="email" name="eemail" value="{{parent.eemail}}" />
+                <input type="email" name="eemail" value="{{employee.eemail}}" />
             </div>
         </div>
         <div>
-            <p>parent Contact:</p>
+            <p>Employee Contact:</p>
             <div>
-                <input type="text" name="econtact" value="{{parent.econtact}}" />
+                <input type="text" name="econtact" value="{{employee.econtact}}" />
             </div>
         </div>
         <div>
